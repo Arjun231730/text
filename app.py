@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "static"
-OCR_API_KEY = "bbef5d657f88957"  # Your Space OCR API key
+OCR_API_KEY = "bbef5d657f88957"  # Replace with your real key or use an env var
 
 @app.route("/", methods=["GET", "POST"])
 def index():
