@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple OCR Output</title>
+</head>
+<body>
+  <h2>Upload Image to Get OCR Text</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Extract</button>
+  </form>
+
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% endif %}
+
+  {% if raw_text %}
+    <h3>📝 OCR Output:</h3>
+    <pre>{{ raw_text }}</pre>
+  {% endif %}
+</body>
+</html>
